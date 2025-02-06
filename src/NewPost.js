@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import DataContext from './Context/DataContext';
 
 const NewPost = () => {
-  const {postTitle,setPosttitle,postBody,setPostBody,handleSubmit}=useContext(DataContext)
+  const {postTitle,setPostTitle,postBody,setPostBody,handleSubmit}=useContext(DataContext)
   return (
     <main className='new-post'>
       <h1>New Post</h1>
@@ -24,7 +24,7 @@ const NewPost = () => {
             }
           }}
           value={postTitle}
-          onChange={(e) => setPosttitle(e.target.value)}
+          onChange={(e) => setPostTitle(e.target.value)}
 
         />
 

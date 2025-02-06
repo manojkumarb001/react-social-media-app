@@ -6,16 +6,16 @@ import SendIcon from '@mui/icons-material/Send';
 import DataContext from './Context/DataContext';
 
 const EditPost = () => {
-    const { posts, editTitle, editBody, setEdittitle, setEditBody, handleEdit}=useContext(DataContext)
+    const { posts, editTitle, editBody, setEditTitle, setEditBody, handleEdit}=useContext(DataContext)
     const { id } = useParams()
     const updatedpost = posts.find(post => post.id.toString() === id)
     useEffect(
         () => {
             if (updatedpost) {
-                setEdittitle(updatedpost.postTitle)
+                setEditTitle(updatedpost.postTitle)
                 setEditBody(updatedpost.postBody)
             }
-        },[updatedpost,setEdittitle,setEditBody]
+        },[updatedpost,setEditTitle,setEditBody]
     )
 
     return (
@@ -41,7 +41,7 @@ const EditPost = () => {
                                     }
                                 }}
                                 value={editTitle}
-                                onChange={(e) => setEdittitle(e.target.value)}
+                                onChange={(e) => setEditTitle(e.target.value)}
 
                             />
 
