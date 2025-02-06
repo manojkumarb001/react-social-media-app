@@ -20,7 +20,7 @@ function App() {
     <div className="App">
 
       <DataProvider>
-        <Header title="sOCIAL mEDIA aPP"/>
+        <Header title="React Social Media Page"/>
         <Navbar/>
 
         <Routes>
